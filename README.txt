@@ -1,3 +1,11 @@
+## Hero Section
+![Hero Section](https://github.com/rakasadiantara/cermati.com/blob/main/dokumentasi/1.png)
+
+
+## Skill Section
+![skill-section](https://github.com/rakasadiantara/cermati.com/blob/main/dokumentasi/2.png)
+*For Access : https://rakasadiantara.github.io/cermati.com/*
+
 Cermati.com Front-end Developer Test
 -------------------------------------------------
 
