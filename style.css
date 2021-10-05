@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --blue: #007bc1;
+    --dark-blue: #004a75;
+    --orange: #ff8000;
+    --dark-orange: #cc6600;
+    --smoke-grey: #e5e5e5;
+  }
+
+a {
+    text-decoration: none;
+}
+
+.notification-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--smoke-grey);
+    padding: 10px;
+    width: 100%;
+}
+
+.notification-panel {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 32px 16px 32px;
+
+}
+
+.notification-panel p {
+    float: left;
+    margin-right: 24px;
+    max-width: 550px;
+    margin-bottom: 16px;
+}
+
+.notification-panel button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--blue);
+    color: white;
+}
+
+.notification-panel a {
+    color: blue;
+}
+
+.notification-panel button:hover {
+    background-color: var(--dark-blue);
+}
+
+.hide-notification {
+    position: absolute;
+    transform: translateY(-100%);
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+
+.container {
+    max-width: 1366px;
+    padding: 0 32px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    margin-top: 200px;
+}
+
+header img {
+    width: 40px;
+    position: absolute;
+    top: 30px;
+    z-index: 0;
+}
+
+.hero-wrapper {
+    background: linear-gradient(
+        #00578a98,
+        #00578a98
+      ), url("./assets/work-desk__dustin-lee.jpg") no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    color: white;
+    padding: 180px 0 180px 0;
+    text-align: center;
+}
+
+.hero-wrapper h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.hero-wrapper h2 {
+    padding-bottom: 4px;
+    font-size: 30px;
+    font-weight: inherit;
+}
+
+.hero-wrapper p {
+    width: 400px;
+    margin: 0 auto;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-wrapper button {
+    padding: 16px 32px;
+    text-transform: uppercase;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-wrapper button:hover {
+    background-color: white;
+    color: var(--dark-blue);
+
+}
+
+.highlights-panel {
+    background-color: var(--smoke-grey);
+    padding: 40px 0;
+    color: rgb(66, 66, 66);
+}
+
+.section-header {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.highlights-panel h1 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content {
+    padding: 16px 14px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    width: 32%;
+    display: float;
+    color: rgb(66, 66, 66);
+}
+
+.content h2 {
+    float: left;
+    font-weight: 500;
+
+}
+.content .fa{
+    color: gray;
+    font-size: 30px;
+    float: right;
+
+}
+
+.content p {
+    margin-top: 40px;
+    clear: left;
+}
+
+footer {
+    text-align: center;
+    background-color: #050328;
+    color: #a8aec9;
+    padding: 40px 0;
+}
+
+.newsletter-panel{
+    position: fixed;
+    padding: 20px 20px 10px 20px;
+    background-color: #1583c3e0;
+    color: white;
+    max-width: 640px;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(150px);
+}
+
+.fa-times {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.newsletter-panel h3 {
+    clear: right;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.newsletter-panel p {
+    margin-bottom: 16px;
+}
+
+.email {
+    width: 80%;
+    border: none;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+
+.count-me-in {
+    border: none;
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+}
+
+.hide-newsletter {
+    visibility: hidden;
+    transform: translateY(100%);
+    transition-timing-function: ease-out;
+    transition: 1s;
+}
+
+.newsletter-panel.active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-timing-function: ease-out;
+    transition: 1s;
+}
+
+/* Responsive */
+@media all and (max-width: 960px) {
+    .content {
+        width: 48%;
+    }
+}
+  
+@media all and (max-width: 480px) {
+    .content, .email, .count-me-in {
+        width: 100%;
+    }
+
+}
